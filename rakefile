@@ -1,0 +1,4 @@
+task :default => [:setup]
+task :setup do
+    gem install 'nokogiri'
+end
