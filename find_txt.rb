@@ -13,7 +13,7 @@ while i < lyrics_links.length
     link = lyrics_links.at(i)
     i = i+1
     begin
-        $stdout.puts 'ohhla.com/' + link['href']
+        puts 'ohhla.com/' + link['href']
     rescue Errno::EPIPE
         break
     end

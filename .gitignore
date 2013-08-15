@@ -1,5 +1,4 @@
 *.py[cod]
-Gemfile.lock
 
 # C extensions
 *.so
