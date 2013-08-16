@@ -1,5 +1,8 @@
 *.py[cod]
 
+#Heroku local env
+.env
+
 # C extensions
 *.so
 
