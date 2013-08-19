@@ -11,6 +11,9 @@ for line in lines:
 db = create_engine('postgres://hsdenrirnstatl:3A-7t-XvCyYEGR8I2s76pZbwwM@ec2-107-20-165-44.compute-1.amazonaws.com:5432/db9lrr1ft7uf29')
 db.echo = False
 
+Session = sessionmaker(bind=db)
+
+
 Base =  declarative_base()
 
 class Artist(Base):
@@ -26,5 +29,8 @@ class Artist(Base):
 
     def __repr__(self):
         return "<Artist('%s','%s')>" % (self.name, self.url)
+
+
+Base.metadata.create_all()
 
 
