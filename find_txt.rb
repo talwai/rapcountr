@@ -2,10 +2,15 @@ require 'nokogiri'
 require 'open-uri'
 
 
-artist = ARGV[0]
+URL = ARGV[0]
 
-doc  = Nokogiri::HTML(open('http://ohhla.com/YFA_' + artist.to_s + '.html'))
+doc  = Nokogiri::HTML(open(URL))
+puts doc
 
+true_url = doc.css('meta')[0][:content].split(';').last.strip.split('=').last
+puts true_url
+
+doc = Nokogiri::HTML(open(true_url))
 lyrics_links = doc.css("a").select{|link| link['href'] =~ /\.txt$/  }
 i = 0
 

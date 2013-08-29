@@ -3,6 +3,7 @@ require 'open-uri'
 
 
 artist = ARGV[0]
+BASE_URL = 'http://ohhla.com/'
 
 doc = Nokogiri::HTML(open('http://ohhla.com/all.html'))
 doc_2 = Nokogiri::HTML(open('http://ohhla.com/all_two.html'))
@@ -19,13 +20,15 @@ artists_html = doc.css("a").select{|link| link['href'] =~ /anonymous/ }
 ;
 
 artists = []
+urls = []
 i = 0
 
 while i < artists_html.length
     artists[i] = artists_html.at(i).text
+    urls[i] = BASE_URL + artists_html.at(i)['href'] #Note attributes referenced with [], text with .text
     i = i+1
     begin
-        puts artists[i-1]
+        puts urls[i-1]
     rescue Errno::EPIPE
         break
     end
