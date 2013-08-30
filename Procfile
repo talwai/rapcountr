@@ -1,1 +1,1 @@
-web: python print.py
+web: gunicorn rapcountr.wsgi

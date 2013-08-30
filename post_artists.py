@@ -3,11 +3,6 @@ from sqlalchemy import *
 import psycopg2
 import os
 
-artists = []
-lines = sys.stdin.readlines()
-for line in lines:
-	artists.append(line.strip())
-
 db = create_engine('postgres://hsdenrirnstatl:3A-7t-XvCyYEGR8I2s76pZbwwM@ec2-107-20-165-44.compute-1.amazonaws.com:5432/db9lrr1ft7uf29')
 db.echo = False
 
@@ -33,4 +28,9 @@ class Artist(Base):
 
 Base.metadata.create_all()
 
+artists = []
+lines = sys.stdin.readlines()
+for line in lines:
+	toks = line.split(',')
+	artists.append(line.strip())
 

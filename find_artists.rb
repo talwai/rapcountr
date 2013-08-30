@@ -28,7 +28,7 @@ while i < artists_html.length
     urls[i] = BASE_URL + artists_html.at(i)['href'] #Note attributes referenced with [], text with .text
     i = i+1
     begin
-        puts urls[i-1]
+        puts artists[i-1]+','+urls[i-1]
     rescue Errno::EPIPE
         break
     end
