@@ -23,7 +23,6 @@ lib64
 
 # Installer logs
 *.rtf
-*.txt
 pip-log.txt
 
 # Unit test / coverage reports
