@@ -10,15 +10,14 @@ def get_text_from_url(url):
     for line in list(raw_lines):
         if line.strip() == '' or line.isspace() or line.strip() == '[Chorus]':
             raw_lines.remove(line)
-    return ' '.join(raw_lines)
+    return ' '.join(raw_lines) + ' '
 
-
-LINES_IN = sys.stdin.read()
-print LINES_IN
+with open('urls.txt','r') as file:
+    LINES_IN = file.readlines()
 
 for line in LINES_IN:
+    line = line.strip()
     artist, url = line.split(',')
-    print artist, url
     filename = "lyrics/" + "".join(artist.split()) + ".txt"
     with open(filename, 'a') as file:
         file.write(get_text_from_url(url.strip()))
