@@ -21,12 +21,11 @@ while i < artists_html.length
     i = i+1
     
     begin
-        puts artists[i-1]+','+urls[i-1]
+        puts artists[i-1] + ','+urls[i-1]
     rescue Errno::EPIPE
         break
     end
 end
-puts i
 
 #lyrics_links.each{|link| $stdout.puts 'ohhla.com/' + link['href'] }
 #doc.search('a').select { |n| n['href'][/\.txt$/] }.map{ |n| n['href'] }

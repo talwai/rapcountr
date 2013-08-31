@@ -7,8 +7,6 @@ from multiprocessing import Pool, cpu_count
 from itertools import izip_longest
 import trie
 
-
-
 def read_in_chunks (fname, chunk_size=1024):
     """Generate file contents, chunk-by-chunk, as specified by chunk_size."""
     with open(fname) as file_object:
