@@ -3,7 +3,7 @@ import jsonpickle
 
 def get_discography(request, artist):
     my_dict = {
-            'key' : 'value'
+            'key' : artist
             }
 
     data  = jsonpickle.encode(my_dict)
