@@ -13,7 +13,9 @@ inArray.each { |artist|
         link = lyrics_links.at(i)
         i = i+1
         begin
-            puts artist.split(',').first + ',' + ROOT_URL + link['href']
+            File.open("urls.txt", "a") do |f|
+            f.puts artist.split(',').first + ',' + ROOT_URL + link['href']
+            end
         rescue Errno::EPIPE
         break
         end
