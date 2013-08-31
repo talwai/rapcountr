@@ -1,4 +1,5 @@
 Django==1.5.2
+PyYAML==3.10
 SQLAlchemy==0.8.2
 Scrapy==0.18.0
 Twisted==13.1.0
@@ -8,6 +9,7 @@ django-toolbelt==0.0.1
 gunicorn==18.0
 jsonpickle==0.4.0
 lxml==3.2.3
+nltk==2.0.4
 psycopg2==2.5.1
 pyOpenSSL==0.13
 queuelib==1.0
