@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from rapcountr.views import get_discography, index_view
+from rapcountr.views import get_frequencies, index_view
 
 
 
@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'rapcountr.views.home', name='home'),
     # url(r'^rapcountr/', include('rapcountr.foo.urls')),
-    url(r'^artist/([^/]+)', get_discography),
+    url(r'^artist/([^/]+)', get_frequencies),
     url('^',index_view)
 
     # Uncomment the admin/doc line below to enable admin documentation:

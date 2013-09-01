@@ -24,12 +24,11 @@ for line in LINES_IN:
     line = line.strip()
     artist, url = line.split(',')
 
-    if artist != current_artist:
-    	current_artist = artist
-        print "Current Artist " + current_artist
+    #if artist != current_artist:
+    #	current_artist = artist
+    #   print "Current Artist " + current_artist
 
     artist  = artist.replace('/','')
-
     filename = "lyrics/" + "".join(artist.split()) + ".txt"
     with open(filename, 'a') as file:
         file.write(get_text_from_url(url.strip()))
