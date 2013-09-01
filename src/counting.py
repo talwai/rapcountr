@@ -81,8 +81,7 @@ if __name__ == "__main__":
             #Get result tries of each subprocess in my_results
             my_results = pool.map(build_trie, read_in_chunks(filename, CHUNK_SIZE))
 
-
-    out_file = open('out_file', 'w')
+    out_file = open('/Users/talwai/dev/rapcountr/out_files/' + filename.split('/')[1], 'w')
 
     #Recurse across results and print out <word, frequency> pairs
     recurse_wrapper(my_results, out_file)
