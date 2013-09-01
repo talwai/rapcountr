@@ -23,6 +23,8 @@ class Artist(models.Model):
     def __unicode__(self):
         return self.name + ' , ' + self.filepath
 
+    class Meta:
+        ordering = ['name']
 
     #collabs = models.ManyToManyField(Artist)
 

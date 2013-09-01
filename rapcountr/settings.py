@@ -164,8 +164,8 @@ LOGGING = {
 
 
 #Uncomment when deploying to Heroku
-import dj_database_url # for parsing DATABASE_URL
-DATABASES['default'] = dj_database_url.config()
+#import dj_database_url # for parsing DATABASE_URL
+#DATABASES['default'] = dj_database_url.config()
 
 
 
