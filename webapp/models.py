@@ -17,9 +17,13 @@ class Word_Freq_Pairs(models.Model):
     frequency = models.IntegerField()
 
 class Artist(models.Model):
-    name = models.CharField(max_length=100)
-    url = models.URLField()
-    filepath = models.FilePathField(path="/datastore/%s.txt" % name)
+    name = models.CharField(max_length=200)
+    filepath = models.FilePathField()
+
+    def __unicode__(self):
+        return self.name + ' , ' + self.filepath
+
+
     #collabs = models.ManyToManyField(Artist)
 
 #class Artist(models.Model):

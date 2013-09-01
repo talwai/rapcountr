@@ -2,7 +2,6 @@ import nltk
 import sys
 from urllib import urlopen
 
-
 def get_text_from_url(url):
     try:
         html = urlopen(url).read()
@@ -15,7 +14,7 @@ def get_text_from_url(url):
     except IOError:
         return ' '
 
-with open('urls_2.txt','r') as file:
+with open('urls.txt','r') as file:
     LINES_IN = file.readlines()
 
 current_artist = ''
@@ -30,6 +29,7 @@ for line in LINES_IN:
 
     artist  = artist.replace('/','')
     filename = "lyrics/" + "".join(artist.split()) + ".txt"
+
     with open(filename, 'a') as file:
         file.write(get_text_from_url(url.strip()))
 

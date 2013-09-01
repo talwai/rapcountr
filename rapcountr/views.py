@@ -1,15 +1,11 @@
 from django.http import HttpResponse
-from django.template import Template, Context
-from django.template.loader import get_template
+from django.shortcuts import render
 
 import jsonpickle
 
 def get_frequencies(request, artist):
-    t = get_template('frequencies.html')
-    c = Context({'name' : artist})
-    html = t.render(c)
-    return HttpResponse(html)
-
+    args = {'name' : artist}
+    return render(request, 'frequencies.html', args)
 
 
 def index_view(request):

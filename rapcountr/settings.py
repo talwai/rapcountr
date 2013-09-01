@@ -13,18 +13,6 @@ PROJECT_DIR = os.path.dirname(__file__)
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
-}
-
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -33,7 +21,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = ''
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -50,7 +38,7 @@ USE_I18N = True
 USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
-USE_TZ = True
+USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
@@ -161,8 +149,24 @@ LOGGING = {
     }
 }
 
+
+#Uncomment when deploying to Heroku
 import dj_database_url # for parsing DATABASE_URL
 DATABASES['default'] = dj_database_url.config()
+
+
+#DATABASES = {
+ #       'default' : {
+  #          'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+   #         'NAME': 'test_db',                      # Or path to database file if using sqlite3.
+    #        'USER': '',                      # Not used with sqlite3.
+     #       'PASSWORD': '',                  # Not used with sqlite3.
+      #      'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+       #     'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        #    }
+        #}
+
+
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
