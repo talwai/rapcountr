@@ -1,7 +1,5 @@
 Django==1.5.2
 PyYAML==3.10
-SQLAlchemy==0.8.2
-Scrapy==0.18.0
 Twisted==13.1.0
 dj-database-url==0.2.2
 dj-static==0.0.5
