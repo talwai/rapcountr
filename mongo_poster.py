@@ -20,6 +20,7 @@ else:
 collection = db['Tries_db']
 
 for artist in Artist.objects.all():
+    print artist.name
     full_path = 'out_files/' + artist.filepath
     post = {
             'name' : artist.name,
