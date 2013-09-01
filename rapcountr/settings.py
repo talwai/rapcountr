@@ -108,7 +108,7 @@ ROOT_URLCONF = 'rapcountr.urls'
 WSGI_APPLICATION = 'rapcountr.wsgi.application'
 
 TEMPLATE_DIRS = (
-    '/Users/talwai/dev/rapcountr/templates',
+    '../templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
