@@ -1,8 +1,11 @@
 import os, pymongo
+
 from django.http import HttpResponse
 from django.shortcuts import render
 from webapp.models import Artist
 from Globals import name_dict, file_dict
+
+from urlparse import urlparse
 
 from query_server import *
 import jsonpickle
