@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'rapcountr.views.home', name='home'),
     # url(r'^rapcountr/', include('rapcountr.foo.urls')),
-    url(r'^artist/([^/]+)', get_frequencies),
+    url(r'^artist/([^/]+)/([^/]+)', get_frequencies),
     url('^',index_view)
 
     # Uncomment the admin/doc line below to enable admin documentation:

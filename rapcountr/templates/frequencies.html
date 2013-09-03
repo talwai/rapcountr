@@ -1,6 +1,12 @@
 <html>
     <body>
         Word-Frequency Counts for Artist {{ name }}
+        
+        <ul>
+            {% for result in result_list %}
+                <li> {{ result }} </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
 
