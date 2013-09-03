@@ -31,7 +31,7 @@ def get_frequencies(request, artist, query):
        #obj = Artist.objects.get(name=artist)
         name = name_dict[artist.lower()]
         curr_artist = collection.find_one( {"name" : name} )
-        trie = curr_artist['trie']
+        trie = jsonpickle.decode(curr_artist['trie'])
     except KeyError: #Artist.DoesNotExist
         return HttpResponse("No Such Artist %s" % artist)
     else:
