@@ -1,4 +1,4 @@
-import os
+import os, pymongo
 from django.http import HttpResponse
 from django.shortcuts import render
 from webapp.models import Artist
