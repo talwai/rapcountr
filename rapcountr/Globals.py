@@ -29,6 +29,7 @@ name_dict = {
     'b.o.b.' : 'B.o.B',
     'babybash' : 'Baby Bash',
     'beastieboys' : 'Beastie Boys',
+    'biggie' : 'Notorious B.I.G.',
     'bonethugs' : 'Bone Thugs',
     'kanyewest' : 'Kanye West',
     'jay-z' : 'Jay-Z',
