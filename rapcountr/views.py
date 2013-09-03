@@ -35,7 +35,7 @@ def get_frequencies(request, artist, query):
     except KeyError: #Artist.DoesNotExist
         return HttpResponse("No Such Artist %s" % artist)
     else:
-        args = {'name' : filepath,
+        args = {'name' : name,
                 'result_list' : global_lookup(query, trie) }
     return render(request, 'frequencies.html', args)
 
