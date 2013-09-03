@@ -63,7 +63,7 @@ def global_lookup(query, trie = None):
 
     ret_array = []
     for (score, word) in results_list:
-        ret_array.append( ("Word: "+ word + " Score: " + score) )
+        ret_array.append( ("Word: "+ word + " Score: " + str(score)) )
 
     return ret_array
 
