@@ -9,6 +9,7 @@ http://rapcountr.herokuapp.com/artist/[name]/[word]
 ```
 
 The identifier [name] now only works for a limited dataset of hip-hop artist ids, including: 
+```
 {
     'tupac', '2Pac (Tupac Shakur)',
     '50cent' : '50 Cent (+ G-Unit)',
@@ -31,7 +32,7 @@ The identifier [name] now only works for a limited dataset of hip-hop artist ids
     'devinthedude' : 'Devin the Dude',
     'eminem' : 'Eminem (+ D-12)'
 }
-
+```
 Dataset will be expanded soon!
 
 * Instructions for running and testing locally
