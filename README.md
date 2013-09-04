@@ -36,7 +36,7 @@ The identifier [name] now only works for a limited dataset of hip-hop artist ids
 Dataset will be expanded soon!
 
 Instructions for running and testing locally
-=======
+-------
 
 First, to install dependencies (you might want to be in a virtual env.):
 ```
