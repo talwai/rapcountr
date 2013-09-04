@@ -35,6 +35,7 @@ name_dict = {
     'jay-z' : 'Jay-Z',
     'methodman' : 'Method Man',
     'wizkhalifa' : 'Wiz Khalifa',
+    'snoopdogg' : 'Snoop Dogg',
     'wu-tangclan' : 'Wu-Tang Clan',
     'nas' : 'Nas',
     'devinthedude' : 'Devin the Dude',
